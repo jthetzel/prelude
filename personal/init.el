@@ -10,6 +10,7 @@
 ;; emacs speaks statistics
 (ess-toggle-underscore nil)
 (setq ess-fancy-comments 'nil)
+(setq ess-tab-complete-in-script t)
 
 ;; org-mode
 (setq truncate-lines 'nil)
@@ -34,3 +35,11 @@
    ;;(sql . t)
    ;;(sqlite . t)
    ))
+
+;; function to clear shell
+(defun clear-shell ()
+  (interactive)
+  (let ((old-max comint-buffer-maximum-size))
+    (setq comint-buffer-maximum-size 0)
+    (comint-truncate-buffer)
+    (setq comint-buffer-maximum-size old-max)))
