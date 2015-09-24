@@ -4,11 +4,11 @@
 (setq indent-line-function 'insert-tab)
 
 ;; Initialize packages
-;(package-initialize)
+(package-initialize)
 ;(elpy-enable)
 
 ;; emacs speaks statistics
-(ess-toggle-underscore nil)
+(ess-toggle-underscore 'nil)
 (setq ess-fancy-comments 'nil)
 (setq ess-tab-complete-in-script t)
 
@@ -34,6 +34,7 @@
    ;;(shell . t)
    ;;(sql . t)
    ;;(sqlite . t)
+   (octave . t)
    ))
 
 ;; function to clear shell

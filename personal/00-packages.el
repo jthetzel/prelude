@@ -9,6 +9,7 @@
                                  elpy
                                  ess
                                  julia-mode
+                                 ac-octave
                                  ) prelude-packages))
 
 ;; Install my packages
