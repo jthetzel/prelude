@@ -5,7 +5,6 @@
 
 ;; Initialize packages
 (package-initialize)
-;(elpy-enable)
 
 ;; emacs speaks statistics
 (require 'ess-site)
