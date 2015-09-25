@@ -8,6 +8,7 @@
 ;(elpy-enable)
 
 ;; emacs speaks statistics
+(require 'ess-site)
 (ess-toggle-underscore 'nil)
 (setq ess-fancy-comments 'nil)
 (setq ess-tab-complete-in-script t)
@@ -44,3 +45,6 @@
     (setq comint-buffer-maximum-size 0)
     (comint-truncate-buffer)
     (setq comint-buffer-maximum-size old-max)))
+
+;; octave-mode
+(add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
