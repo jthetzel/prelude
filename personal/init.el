@@ -8,12 +8,12 @@
 
 ;; emacs speaks statistics
 (require 'ess-site)
-(ess-toggle-underscore 'nil)
-(setq ess-fancy-comments 'nil)
+(ess-toggle-underscore nil)
+(setq ess-fancy-comments nil)
 (setq ess-tab-complete-in-script t)
 
 ;; org-mode
-(setq truncate-lines 'nil)
+(setq org-startup-truncated)
 
 ;; active Babel languages
 (org-babel-do-load-languages
@@ -47,3 +47,12 @@
 
 ;; octave-mode
 (add-to-list 'auto-mode-alist '("\\.m\\'" . octave-mode))
+(defun octave-mode-ess-bindings ()
+     "Modify key bindings for octave-mode"
+     (local-set-key (kbd "C-c C-j") 'octave-send-line)
+     (local-set-key (kbd "C-c C-p") 'octave-send-block)
+     (local-set-key (kbd "C-c C-r") 'octave-send-region)
+     (local-set-key (kbd "C-c C-z") 'octave-show-process-buffer)
+     (local-set-key (kbd "C-c C-q") 'octave-kill-process)
+     )
+(add-hook 'octave-mode-hook 'octave-mode-ess-bindings)
