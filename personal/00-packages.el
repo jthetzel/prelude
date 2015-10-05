@@ -9,6 +9,7 @@
                                  elpy
                                  ess
                                  julia-mode
+                                 pyvenv
                                  ) prelude-packages))
 
 ;; Install my packages
