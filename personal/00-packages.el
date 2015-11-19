@@ -10,7 +10,8 @@
                                  ess
                                  julia-mode
                                  ac-octave
-                                 pyvenv                                 
+                                 pyvenv
+                                 markdown-mode
                                  ) prelude-packages))
 
 ;; Install my packages
