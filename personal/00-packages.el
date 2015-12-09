@@ -12,6 +12,7 @@
                                  ac-octave
                                  pyvenv
                                  markdown-mode
+                                 ;;web-mode
                                  ) prelude-packages))
 
 ;; Install my packages
