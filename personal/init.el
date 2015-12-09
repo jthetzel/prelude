@@ -12,6 +12,17 @@
 (setq ess-fancy-comments nil)
 (setq ess-tab-complete-in-script t)
 
+;; python-mode
+(elpy-enable)
+(defalias 'workon 'pyvenv-workon)
+(defalias 'activate 'pyvenv-activate)
+; adjust tab width to two spaces
+(defun python-custom-settings ()
+  (setq tab-width 2)
+  (setq python-indent-offset 2)
+  (setq py-indent-offset 2))
+(add-hook 'python-mode-hook 'python-custom-settings)
+
 ;; org-mode
 (setq org-startup-truncated)
 
@@ -56,3 +67,5 @@
      (local-set-key (kbd "C-c C-q") 'octave-kill-process)
      )
 (add-hook 'octave-mode-hook 'octave-mode-ess-bindings)
+
+
