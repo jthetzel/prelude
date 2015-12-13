@@ -14,7 +14,7 @@
                                  pyvenv
                                  markdown-mode
                                  js2-mode
-                                 ;;web-mode
+                                 web-mode
                                  ) prelude-packages))
 
 ;; Install my packages
