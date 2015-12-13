@@ -8,10 +8,12 @@
 (setq prelude-packages (append '(
                                  elpy
                                  ess
+                                 geiser
                                  julia-mode
                                  ac-octave
                                  pyvenv
                                  markdown-mode
+                                 js2-mode
                                  ;;web-mode
                                  ) prelude-packages))
 
