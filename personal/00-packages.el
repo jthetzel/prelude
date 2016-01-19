@@ -9,12 +9,15 @@
                                  elpy
                                  ess
                                  geiser
+                                 paredit
+                                 company
                                  julia-mode
                                  ac-octave
                                  pyvenv
                                  markdown-mode
                                  js2-mode
                                  web-mode
+                                 arduino-mode
                                  ) prelude-packages))
 
 ;; Install my packages
