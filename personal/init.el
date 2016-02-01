@@ -1,10 +1,13 @@
 ;; Set tabs to two spaces
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
+(setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
 
 ;; Initialize packages
 (package-initialize)
+
+;; disable scrollbars
+(scroll-bar-mode -1)
 
 ;; emacs speaks statistics
 (require 'ess-site)
@@ -18,13 +21,13 @@
 (defalias 'activate 'pyvenv-activate)
 ; adjust tab width to two spaces
 (defun python-custom-settings ()
-  (setq tab-width 2)
-  (setq python-indent-offset 2)
-  (setq py-indent-offset 2))
+  (setq tab-width 4)
+  (setq python-indent-offset 4)
+  (setq py-indent-offset 4))
 (add-hook 'python-mode-hook 'python-custom-settings)
 
 ;; org-mode
-(setq org-startup-truncated)
+;(setq org-startup-truncated)
 
 ;; active Babel languages
 (org-babel-do-load-languages
@@ -68,4 +71,10 @@
      )
 (add-hook 'octave-mode-hook 'octave-mode-ess-bindings)
 
+;; Alias for ascii
+(define-coding-system-alias 'ascii 'us-ascii)
 
+;; Set meta to command key on OSX
+(when (eq system-type 'darwin)
+  (setq mac-command-modifier 'meta)
+  (setq mac-option-modifier 'super))

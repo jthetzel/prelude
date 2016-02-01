@@ -7,7 +7,9 @@
 ;; My packages
 (setq prelude-packages (append '(
                                  elpy
+                                 jedi
                                  ess
+                                 monky
                                  geiser
                                  paredit
                                  company
