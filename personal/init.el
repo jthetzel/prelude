@@ -9,6 +9,9 @@
 ;; disable scrollbars
 (scroll-bar-mode -1)
 
+;; Global key binding
+(global-set-key "\M-*" 'pop-tag-mark)
+
 ;; emacs speaks statistics
 (require 'ess-site)
 (ess-toggle-underscore nil)
@@ -25,6 +28,7 @@
   (setq python-indent-offset 4)
   (setq py-indent-offset 4))
 (add-hook 'python-mode-hook 'python-custom-settings)
+
 
 ;; org-mode
 ;(setq org-startup-truncated)
