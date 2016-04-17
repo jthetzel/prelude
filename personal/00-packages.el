@@ -22,6 +22,7 @@
                                  web-mode
                                  arduino-mode
                                  docker
+                                 exec-path-from-shell
                                  ) prelude-packages))
 
 ;; Install my packages
