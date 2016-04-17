@@ -9,6 +9,7 @@
                                  elpy
                                  jedi
                                  ess
+                                 helm
                                  monky
                                  geiser
                                  paredit
@@ -20,6 +21,7 @@
                                  js2-mode
                                  web-mode
                                  arduino-mode
+                                 docker
                                  ) prelude-packages))
 
 ;; Install my packages
