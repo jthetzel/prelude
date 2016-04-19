@@ -23,6 +23,7 @@
                                  arduino-mode
                                  docker
                                  exec-path-from-shell
+                                 flx-ido
                                  ) prelude-packages))
 
 ;; Install my packages
