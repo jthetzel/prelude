@@ -82,3 +82,7 @@
 (when (eq system-type 'darwin)
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super))
+
+;; es-mode for Elasticsearch
+(add-to-list 'auto-mode-alist '("\\.es$" . es-mode))
+
