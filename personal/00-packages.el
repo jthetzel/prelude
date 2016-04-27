@@ -24,6 +24,7 @@
                                  docker
                                  exec-path-from-shell
                                  flx-ido
+                                 es-mode
                                  ) prelude-packages))
 
 ;; Install my packages
