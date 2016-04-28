@@ -26,6 +26,8 @@
                                  flx-ido
                                  es-mode
                                  js2-mode
+                                 js2-refactor
+                                 ac-js2
                                  ) prelude-packages))
 
 ;; Install my packages
