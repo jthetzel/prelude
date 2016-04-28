@@ -25,6 +25,7 @@
                                  exec-path-from-shell
                                  flx-ido
                                  es-mode
+                                 js2-mode
                                  ) prelude-packages))
 
 ;; Install my packages
