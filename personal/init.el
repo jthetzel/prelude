@@ -104,6 +104,4 @@
 
 ;; js2-jsx-mode
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-jsx-mode))
-
-;; json mode
-(add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . js2-jsx-mode))
