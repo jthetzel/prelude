@@ -28,6 +28,7 @@
                                  js2-mode
                                  js2-refactor
                                  ac-js2
+                                 json-mode
                                  ) prelude-packages))
 
 ;; Install my packages

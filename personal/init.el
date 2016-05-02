@@ -83,6 +83,11 @@
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super))
 
+;; Copy environment variables for OSX
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize)
+  (exec-path-from-shell-copy-env "PYTHONPATH"))
+
 ;; es-mode for Elasticsearch
 (add-to-list 'auto-mode-alist '("\\.es$" . es-mode))
 
@@ -99,3 +104,6 @@
 
 ;; js2-jsx-mode
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-jsx-mode))
+
+;; json mode
+(add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
