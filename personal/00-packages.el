@@ -28,6 +28,7 @@
                                  js2-mode
                                  js2-refactor
                                  ac-js2
+                                 skewer-mode
                                  json-mode
                                  ) prelude-packages))
 
