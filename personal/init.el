@@ -102,6 +102,7 @@
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
-;; js2-jsx-mode
+;; js2-jsx-mode and json-mode
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-jsx-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . js2-jsx-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . js2-jsx-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
