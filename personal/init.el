@@ -1,4 +1,4 @@
-;; Set tabs to two spaces
+;; Set tabs to four spaces
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 (setq indent-line-function 'insert-tab)
@@ -106,3 +106,13 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-jsx-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx$" . js2-jsx-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
+(add-hook 'json-mode-hook
+          (lambda ()
+            (make-local-variable 'js-indent-level)
+            (setq js-indent-level 2)
+            (setq-default tab-width 2)))
+(add-hook 'js2-jsx-mode-hook
+          (lambda ()
+            (make-local-variable 'js-indent-level)
+            (setq js-indent-level 2)
+            (setq-default tab-width 2)))
