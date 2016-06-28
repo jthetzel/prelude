@@ -19,7 +19,10 @@
                                  pyvenv
                                  markdown-mode
                                  js2-mode
+                                 ac-js2
+                                 nodejs-repl
                                  web-mode
+                                 swank-js
                                  arduino-mode
                                  docker
                                  exec-path-from-shell
