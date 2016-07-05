@@ -22,7 +22,7 @@
                                  ac-js2
                                  nodejs-repl
                                  web-mode
-                                 swank-js
+                                 ;; swank-js
                                  arduino-mode
                                  docker
                                  exec-path-from-shell
@@ -33,6 +33,7 @@
                                  ac-js2
                                  skewer-mode
                                  json-mode
+                                 editorconfig
                                  ) prelude-packages))
 
 ;; Install my packages
