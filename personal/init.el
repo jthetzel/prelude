@@ -10,7 +10,13 @@
 (scroll-bar-mode -1)
 
 ;; Global key binding
-(global-set-key "\M-*" 'pop-tag-mark)
+; (global-set-key "\M-*" 'pop-tag-mark)
+
+;; Company-mode
+(add-hook 'after-init-hook 'global-company-mode)
+
+;; linum-mode
+(global-linum-mode 1)
 
 ;; emacs speaks statistics
 (require 'ess-site)
@@ -116,3 +122,12 @@
             (make-local-variable 'js-indent-level)
             (setq js-indent-level 2)
             (setq-default tab-width 2)))
+
+;; magit-gitflow
+;;; C-f in the magit status buffer invokes the magit-gitflow popup. If you
+;;; would like to use a different key, set the magit-gitflow-popup-key variable
+;;; before loading magit-gitflow
+;; (setq magit-gitflow-popup-key "C-n")
+
+(require 'magit-gitflow)
+(add-hook 'magit-mode-hook 'turn-on-magit-gitflow)
