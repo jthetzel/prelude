@@ -19,9 +19,11 @@
                                  pyvenv
                                  markdown-mode
                                  js2-mode
+                                 tern
                                  ac-js2
                                  nodejs-repl
                                  web-mode
+                                 ;; magit-gitflow
                                  ;; swank-js
                                  arduino-mode
                                  docker
