@@ -23,7 +23,7 @@
                                  ac-js2
                                  nodejs-repl
                                  web-mode
-                                 ;; magit-gitflow
+                                 magit-gitflow
                                  ;; swank-js
                                  arduino-mode
                                  docker
