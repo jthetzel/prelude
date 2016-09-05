@@ -36,6 +36,12 @@
                                  skewer-mode
                                  json-mode
                                  editorconfig
+                                 haskell-mode
+                                 hi2
+                                 flycheck
+                                 flycheck-haskell
+                                 shm
+                                 hindent
                                  ) prelude-packages))
 
 ;; Install my packages
