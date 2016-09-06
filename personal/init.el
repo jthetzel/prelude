@@ -122,7 +122,8 @@
             (make-local-variable 'js-indent-level)
             (setq js-indent-level 2)
             (setq-default tab-width 2)
-            (setq js2-strict-missing-semi-warning nil)))
+            (setq js2-strict-missing-semi-warning nil)
+            (setq js2-strict-trailing-comma-warning nil)))
 
 ;; magit-gitflow
 ;;; C-f in the magit status buffer invokes the magit-gitflow popup. If you
