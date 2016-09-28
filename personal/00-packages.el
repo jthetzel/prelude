@@ -42,6 +42,8 @@
                                  flycheck-haskell
                                  shm
                                  hindent
+                                 markdown-mode
+                                 tide
                                  ) prelude-packages))
 
 ;; Install my packages
