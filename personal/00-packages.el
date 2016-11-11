@@ -44,6 +44,7 @@
                                  hindent
                                  markdown-mode
                                  tide
+                                 js-comint
                                  ) prelude-packages))
 
 ;; Install my packages
