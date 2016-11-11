@@ -125,6 +125,11 @@
             (setq js2-strict-missing-semi-warning nil)
             (setq js2-strict-trailing-comma-warning nil)))
 
+;; using web-mode for js/jsx/json
+(add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
+
 ;; magit-gitflow
 ;;; C-f in the magit status buffer invokes the magit-gitflow popup. If you
 ;;; would like to use a different key, set the magit-gitflow-popup-key variable
