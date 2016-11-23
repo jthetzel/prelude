@@ -107,6 +107,9 @@
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-hook 'web-mode-hook
+          (lambda ()
+            (setq web-mode-auto-quote-style 2)))
 
 ;; js2-jsx-mode and json-mode
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-jsx-mode))
