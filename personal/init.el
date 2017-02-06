@@ -174,3 +174,5 @@
             (when (string-equal "tsx" (file-name-extension buffer-file-name))
               (setup-tide-mode))))
 
+;; use web-mode for php
+(add-to-list 'auto-mode-alist '("\\.php$" . web-mode))
