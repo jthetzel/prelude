@@ -10,6 +10,7 @@
                                  jedi
                                  ess
                                  helm
+                                 helm-projectile
                                  monky
                                  geiser
                                  paredit
