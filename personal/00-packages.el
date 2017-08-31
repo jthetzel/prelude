@@ -6,6 +6,8 @@
 
 ;; My packages
 (setq prelude-packages (append '(
+                                 ivy
+                                 swiper
                                  elpy
                                  jedi
                                  ess
