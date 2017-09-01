@@ -9,6 +9,7 @@
                                  ivy
                                  swiper
                                  counsel
+                                 counsel-projectile
                                  elpy
                                  jedi
                                  ess
