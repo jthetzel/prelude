@@ -8,6 +8,7 @@
 (setq prelude-packages (append '(
                                  ivy
                                  swiper
+                                 counsel
                                  elpy
                                  jedi
                                  ess
@@ -21,7 +22,7 @@
                                  ac-octave
                                  pyvenv
                                  markdown-mode
-                                 rxjs-mode
+                                 rjsx-mode
                                  js2-mode
                                  tern
                                  ac-js2

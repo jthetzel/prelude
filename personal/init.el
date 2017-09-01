@@ -3,11 +3,26 @@
 (setq ivy-use-virtual-buffers t)
 (setq enable-recursive-minibuffers t)
 (global-set-key "\C-s" 'swiper)
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "<f6>") 'ivy-resume)
+(global-set-key (kbd "M-x") 'counsel-M-x)
+(global-set-key (kbd "C-x C-f") 'counsel-find-file)
+(global-set-key (kbd "<f1> f") 'counsel-describe-function)
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable)
+(global-set-key (kbd "<f1> l") 'counsel-find-library)
+(global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
+(global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+(global-set-key (kbd "C-c g") 'counsel-git)
+(global-set-key (kbd "C-c j") 'counsel-git-grep)
+(global-set-key (kbd "C-c k") 'counsel-ag)
+(global-set-key (kbd "C-x l") 'counsel-locate)
+(global-set-key (kbd "C-S-o") 'counsel-rhythmbox)
+(define-key read-expression-map (kbd "C-r") 'counsel-expression-history)
 
 ;; Set tabs to four spaces
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 4)
-(setq indent-line-function 'insert-tab)
+;; (setq-default indent-tabs-mode nil)
+;; (setq-default tab-width 4)
+;; (setq indent-line-function 'insert-tab)
 
 ;; Initialize packages
 (package-initialize)
@@ -118,26 +133,21 @@
             (setq web-mode-auto-quote-style 2)))
 
 ;; js2-jsx-mode and json-mode
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-jsx-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx$" . js2-jsx-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . rjsx-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
 (add-hook 'json-mode-hook
           (lambda ()
             (make-local-variable 'js-indent-level)
             (setq js-indent-level 2)
             (setq-default tab-width 2)))
-(add-hook 'js2-jsx-mode-hook
+(add-hook 'rjsx-mode-hook
           (lambda ()
             (make-local-variable 'js-indent-level)
             (setq js-indent-level 2)
             (setq-default tab-width 2)
             (setq js2-strict-missing-semi-warning nil)
             (setq js2-strict-trailing-comma-warning nil)))
-
-;; using web-mode for js/jsx/json
-(add-to-list 'auto-mode-alist '("\\.js$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
 
 ;; magit-gitflow
 ;;; C-f in the magit status buffer invokes the magit-gitflow popup. If you
