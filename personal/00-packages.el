@@ -21,6 +21,7 @@
                                  ac-octave
                                  pyvenv
                                  markdown-mode
+                                 rxjs-mode
                                  js2-mode
                                  tern
                                  ac-js2
