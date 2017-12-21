@@ -39,6 +39,29 @@
 ;; linum-mode
 (global-linum-mode 1)
 
+;; http://www.flycheck.org/manual/latest/index.html
+(require 'flycheck)
+
+;; turn on flychecking globally
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; disable jshint since we prefer eslint checking
+(setq-default flycheck-disabled-checkers
+              (append flycheck-disabled-checkers
+                      '(javascript-jshint)))
+
+;; use eslint with web-mode for jsx files
+(flycheck-add-mode 'javascript-eslint 'web-mode)
+(flycheck-add-mode 'javascript-eslint 'rjsx-mode)
+
+;; customize flycheck temp file prefix
+(setq-default flycheck-temp-prefix ".flycheck")
+
+;; disable json-jsonlist checking for json files
+(setq-default flycheck-disabled-checkers
+              (append flycheck-disabled-checkers
+                      '(json-jsonlist)))
+
 ;; emacs speaks statistics
 (require 'ess-site)
 (ess-toggle-underscore nil)
@@ -147,7 +170,9 @@
             (setq js-indent-level 2)
             (setq-default tab-width 2)
             (setq js2-strict-missing-semi-warning nil)
-            (setq js2-strict-trailing-comma-warning nil)))
+            (setq js2-strict-trailing-comma-warning nil))
+          
+          )
 
 ;; magit-gitflow
 ;;; C-f in the magit status buffer invokes the magit-gitflow popup. If you

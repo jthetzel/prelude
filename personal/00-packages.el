@@ -23,6 +23,7 @@
                                  ac-octave
                                  pyvenv
                                  markdown-mode
+                                 indium
                                  rjsx-mode
                                  js2-mode
                                  tern
@@ -55,3 +56,4 @@
 
 ;; Install my packages
 (prelude-install-packages)
+> 
