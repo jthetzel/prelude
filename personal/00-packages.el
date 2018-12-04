@@ -19,6 +19,7 @@
                                  geiser
                                  paredit
                                  company
+                                 company-flow
                                  julia-mode
                                  ac-octave
                                  pyvenv
@@ -29,7 +30,9 @@
                                  ac-js2
                                  nodejs-repl
                                  web-mode
+                                  magit-gh-pulls
                                  magit-gitflow
+                                  magithub
                                  ;; swank-js
                                  arduino-mode
                                  docker
@@ -46,11 +49,15 @@
                                  hi2
                                  flycheck
                                  flycheck-haskell
+                                 flycheck-flow
                                  shm
                                  hindent
                                  markdown-mode
                                  tide
                                  js-comint
+                                 solidity-mode
+                                 flymake-solidity
+                                 graphql-mode
                                  ) prelude-packages))
 
 ;; Install my packages
