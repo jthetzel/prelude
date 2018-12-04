@@ -133,6 +133,8 @@
             (setq web-mode-auto-quote-style 2)))
 
 ;; js2-jsx-mode and json-mode
+(require 'flycheck-flow)
+(flycheck-add-next-checker 'javascript-standard 'javascript-flow)
 (add-to-list 'auto-mode-alist '("\\.js$" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx$" . rjsx-mode))
 (add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
@@ -147,7 +149,8 @@
             (setq js-indent-level 2)
             (setq-default tab-width 2)
             (setq js2-strict-missing-semi-warning nil)
-            (setq js2-strict-trailing-comma-warning nil)))
+            (setq js2-strict-trailing-comma-warning nil))
+            )
 
 ;; magit-gitflow
 ;;; C-f in the magit status buffer invokes the magit-gitflow popup. If you
