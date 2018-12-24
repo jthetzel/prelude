@@ -2,7 +2,7 @@
 (add-to-list 'package-archives
              '("melpa" .
                "http://melpa.org/packages/"))
-(package-initialize)
+;; (package-initialize)
 
 ;; My packages
 (setq prelude-packages (append '(
@@ -24,6 +24,8 @@
                                  ac-octave
                                  pyvenv
                                  markdown-mode
+                                 merlin
+                                 reason-mode
                                  rjsx-mode
                                  js2-mode
                                  tern
@@ -50,6 +52,7 @@
                                  flycheck
                                  flycheck-haskell
                                  flycheck-flow
+                                 company-flow
                                  shm
                                  hindent
                                  markdown-mode
