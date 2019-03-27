@@ -61,6 +61,7 @@
                                  solidity-mode
                                  flymake-solidity
                                  graphql-mode
+                                 ensime
                                  ) prelude-packages))
 
 ;; Install my packages
