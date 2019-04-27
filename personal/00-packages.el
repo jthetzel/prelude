@@ -11,6 +11,7 @@
                                  counsel
                                  counsel-projectile
                                  elpy
+                                 pipenv
                                  jedi
                                  ess
                                  helm
@@ -62,6 +63,7 @@
                                  flymake-solidity
                                  graphql-mode
                                  ensime
+                                 protobuf-mode
                                  ) prelude-packages))
 
 ;; Install my packages
