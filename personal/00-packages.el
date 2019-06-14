@@ -6,10 +6,17 @@
 
 ;; My packages
 (setq prelude-packages (append '(
+                                 use-package
                                  ivy
                                  swiper
                                  counsel
                                  counsel-projectile
+                                 lsp-mode
+                                 lsp-ui
+                                 company-lsp
+                                 lsp-treemacs
+                                 helm-lsp
+                                 dap-mode
                                  elpy
                                  pipenv
                                  jedi
@@ -29,6 +36,7 @@
                                  reason-mode
                                  rjsx-mode
                                  js2-mode
+                                 flow-js2-mode
                                  tern
                                  ac-js2
                                  nodejs-repl

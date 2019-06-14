@@ -1,3 +1,56 @@
+;; ;; This is only needed once, near the top of the file
+;; (eval-when-compile
+;;   ;; Following line is not needed if use-package.el is in ~/.emacs.d
+;;   (add-to-list 'load-path "<path where use-package is installed>")
+;;   (require 'use-package))
+
+;; (use-package lsp-mode
+;;   :ensure t
+;;   :config
+
+  
+;;   (require 'lsp-imenu)
+;;   (add-hook 'lsp-after-open-hook 'lsp-enable-imenu)  
+;;   ;; get lsp-python-enable defined
+;;   ;; NB: use either projectile-project-root or ffip-get-project-root-directory
+;;   ;;     or any other function that can be used to find the root directory of a project
+;;   (lsp-define-stdio-client lsp-python "python"
+;;                            #'projectile-project-root
+;;                            '("pyls"))
+
+;;   ;; make sure this is activated when python-mode is activated
+;;   ;; lsp-python-enable is created by macro above 
+;;   (add-hook 'python-mode-hook
+;;             (lambda ()
+;;               (lsp-python-enable)))
+
+;;   ;; lsp extras
+;;   (use-package lsp-ui
+;;     :ensure t
+;;     :config
+;;     (setq lsp-ui-sideline-ignore-duplicate t)
+;;     (add-hook 'lsp-mode-hook 'lsp-ui-mode))
+
+;;   (use-package company-lsp
+;;     :config
+;;     (push 'company-lsp company-backends))
+
+;;   ;; NB: only required if you prefer flake8 instead of the default
+;;   ;; send pyls config via lsp-after-initialize-hook -- harmless for
+;;   ;; other servers due to pyls key, but would prefer only sending this
+;;   ;; when pyls gets initialised (:initialize function in
+;;   ;; lsp-define-stdio-client is invoked too early (before server
+;;   ;; start)) -- cpbotha
+;;   (defun lsp-set-cfg ()
+;;     (let ((lsp-cfg `(:pyls (:configurationSources ("flake8")))))
+;;       ;; TODO: check lsp--cur-workspace here to decide per server / project
+;;       (lsp--set-configuration lsp-cfg)))
+
+;;   (add-hook 'lsp-after-initialize-hook 'lsp-set-cfg))
+
+;; (require 'lsp-mode)
+;; (add-hook 'js-mode #'lsp)
+
 ;; ivy mode
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -135,9 +188,10 @@
 ;; js2-jsx-mode and json-mode
 (require 'flycheck-flow)
 (flycheck-add-next-checker 'javascript-standard 'javascript-flow)
-(add-to-list 'auto-mode-alist '("\\.js$" . rjsx-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx$" . rjsx-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . json-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx$" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . js-mode))
+(add-hook 'js2-mode-hook 'flow-minor-mode)
 (add-hook 'json-mode-hook
           (lambda ()
             (make-local-variable 'js-indent-level)
@@ -150,7 +204,11 @@
             (setq-default tab-width 2)
             (setq js2-strict-missing-semi-warning nil)
             (setq js2-strict-trailing-comma-warning nil))
-            )
+          )
+(add-hook 'js-mode-hook
+          (lambda ()
+            (setq js-indent-level 2))
+          )
 
 ;; magit-gitflow
 ;;; C-f in the magit status buffer invokes the magit-gitflow popup. If you
@@ -251,6 +309,6 @@
 ;;----------------------------------------------------------------------------
 ;; Scala setup
 ;;----------------------------------------------------------------------------
-(use-package ensime
-             :ensure t
-             :pin melpa-stable)
+;; (use-package ensime
+;;              :ensure t
+;;              :pin melpa-stable)
